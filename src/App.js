@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Enroll from './components/EnrollComponent';
+import {Navbar, NavbarBrand} from 'reactstrap'
 import {STUDENTDATA} from './shared/studentsdata'; 
 import { Component } from 'react';
 
@@ -16,8 +17,19 @@ class App extends Component{
 
   render(){
     return (
-      <div>
-      <h1>helloj</h1>
+      
+      <div className="App">
+      <Navbar color="dark primary mb-3">
+        <div className="container">
+          <NavbarBrand href="/"> FYP Management System
+
+          </NavbarBrand>
+
+        </div>
+
+      </Navbar>
+       
+
       <Enroll studentdata={this.state.studentdata}/>
       </div>
     );
