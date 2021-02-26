@@ -1,17 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import Enroll from './components/EnrollComponent';
+import Sidebar from './components/sidebar';
 import {Navbar, NavbarBrand} from 'reactstrap'
-import {STUDENTDATA} from './shared/studentsdata'; 
 import { Component } from 'react';
 
+import {STUDENTDATA} from './shared/studentsdata'; 
+import {SIDEBARDATA} from './shared/sidebardata'; 
 class App extends Component{
 
   constructor(props){
     super(props);
 
     this.state = {
-      studentdata:STUDENTDATA
+      studentdata:STUDENTDATA,
+      sidebardata:SIDEBARDATA
     };
   }
 
@@ -19,17 +22,8 @@ class App extends Component{
     return (
       
       <div className="App">
-      <Navbar color="dark primary mb-3">
-        <div className="container">
-          <NavbarBrand href="/"> FYP Management System
-
-          </NavbarBrand>
-
-        </div>
-
-      </Navbar>
-       
-
+        
+      <Sidebar sidebardata={this.state.sidebardata}/>
       <Enroll studentdata={this.state.studentdata}/>
       </div>
     );
