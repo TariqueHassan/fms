@@ -9,30 +9,21 @@ import Header from './components/Header/Header';
 
 import {STUDENTDATA} from './shared/studentsdata'; 
 import {SIDEBARDATA} from './shared/sidebardata'; 
-class App extends Component{
+function App(){
 
-  constructor(props){
-    super(props);
 
-    this.state = {
-      studentdata:STUDENTDATA,
-      sidebardata:SIDEBARDATA
-    };
-  }
-
-  render(){
     return (
       
-      <div className="App">
+      <div >
       <NavbarComponent/>
       {/* <Sidebar/> */}
+      <div className="bg-success">
       <Header />
-
-      {/* <Enroll studentdata={this.state.studentdata}/> */}
+      </div>
+      {/* <Enroll studentdata={STUDENTDATA}/> */}
       {/* < LoginModalComponent/> */}
       </div>
     );
   }
-}
 
 export default App;
