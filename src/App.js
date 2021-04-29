@@ -17,7 +17,7 @@ function App(){
       <div >
       <NavbarComponent/>
       {/* <Sidebar/> */}
-      <div className="bg-success">
+      <div className="">
       <Header />
       </div>
       {/* <Enroll studentdata={STUDENTDATA}/> */}

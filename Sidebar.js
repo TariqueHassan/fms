@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import Enroll from '../EnrollComponent';
 import { STUDENTDATA } from '../studentsdata';
+
 //import react pro sidebar components
-import { FaRegFileAlt } from "react-icons/fa"
 import {
   ProSidebar,
   Menu,
@@ -11,7 +11,6 @@ import {
   SidebarHeader,
   SidebarFooter,
   SidebarContent,
-  SubMenu,
 } from "react-pro-sidebar";
 
 import {
@@ -31,10 +30,9 @@ import { BiCog } from "react-icons/bi";
 //import sidebar css from react-pro-sidebar module and our custom css 
 import "react-pro-sidebar/dist/css/styles.css";
 import "./Header.css";
-import { UploadReports } from "../UploadReports";
 
 
-const Header = () => {
+const Sidebar = () => {
 
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(false)
@@ -61,16 +59,12 @@ const Header = () => {
     {
       path: "/assign-projects",
       sidebar: () => <div>bubblegum!</div>,
-      main: () =>
-        <div>
-          <h2>Assign Projects</h2>
-
-        </div>
+      main: () => <h2>Assign Projects</h2>
     },
     {
       path: "/projects-archive",
       sidebar: () => <div>shoelaces!</div>,
-      main: () => <div className="col-12">
+      main: () => <div className="col-12 bg-light">
         <h2>Projects Archive</h2>
         <Enroll studentdata={STUDENTDATA} />
       </div>
@@ -80,23 +74,14 @@ const Header = () => {
       sidebar: () => <div>shoelaces!</div>,
       main: () => <h2>Project Progress</h2>
     },
-    {
-      path: "/upload-reports",
-      main: () => 
-              
-              <div>
-                {/* <h2>Upload Reports</h2> */}
-                <UploadReports />
-              </div>
-    }
 
   ];
 
   return (
     <div>
       <Router>
-        <div className="row">
-          <div className="col-3 bg-dark">
+      <div class="row bg-light">
+        <div class="col-3 bg-dark">
             <div id="header" >
               {/* collapsed props to change menu size using menucollapse state */}
               <ProSidebar collapsed={menuCollapse}>
@@ -118,12 +103,7 @@ const Header = () => {
                     <MenuItem icon={<FaList />}><Link to="/assign-projects">Assign Projects</Link></MenuItem>
                     <MenuItem icon={<FaRegHeart />}><Link to="projects-archive">Projects Archive</Link></MenuItem>
                     <MenuItem icon={<RiPencilLine />}><Link to="project-progress">Project Progress</Link></MenuItem>
-                    
-                    <SubMenu title="Reports" icon = {<FaRegFileAlt/>}>
-                    <MenuItem icon={<BiCog />}><Link to="upload-reports">Upload Reports</Link></MenuItem>
-                    <MenuItem icon={<BiCog />}>View Reports</MenuItem>
-                    
-                    </SubMenu>
+                    <MenuItem icon={<BiCog />}>Settings</MenuItem>
                   </Menu>
                 </SidebarContent>
                 <SidebarFooter>
@@ -134,8 +114,8 @@ const Header = () => {
               </ProSidebar>
             </div>
 
-          </div>
-          <div className="col-6 ">
+        </div>
+        <div class="col bg-warning">
             <Switch>
               {
                 routes.map((route, index) => (
@@ -149,13 +129,11 @@ const Header = () => {
                 ))
               }
             </Switch>
-          </div>
-          <div className="col-3 bg-warning ">
-          </div>
         </div>
+      </div>
       </Router>
     </div>
   );
 };
 
-export default Header;
+export default Sidebar;
