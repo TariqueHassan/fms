@@ -9,6 +9,7 @@ import Header from './components/Header/Header';
 
 import {STUDENTDATA} from './shared/studentsdata'; 
 import {SIDEBARDATA} from './shared/sidebardata'; 
+import { ModalR } from './components/ModalUploadReports';
 function App(){
 
 
@@ -16,12 +17,15 @@ function App(){
       
       <div >
       <NavbarComponent/>
+      
       {/* <Sidebar/> */}
       <div className="">
       <Header />
+      {/* <ModalR /> */}
       </div>
       {/* <Enroll studentdata={STUDENTDATA}/> */}
       {/* < LoginModalComponent/> */}
+
       </div>
     );
   }

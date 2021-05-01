@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, PlusIcon } from 'evergreen-ui';
 import { FaPlus } from 'react-icons/fa';
+import { ModalR } from './ModalUploadReports';
 export function UploadReports() {
 
+    const [submitStatus, setSubmitStatus] = useState(false);
+    let statusResult = submitStatus ? 'Unsubmit' : 'Turn in';
     return (
         <>
             <div className="row"><div className="col"><p></p></div></div>
@@ -15,18 +18,17 @@ export function UploadReports() {
 
                             <div className="col-1 "></div>
                             <div className="card-body col-10">
-                                
+
                                 <div className="row">
-                                <div className="col-9 "><h3>Your Work</h3></div>
-                                <div className="col-3"><p>status</p></div>
-                                
-                                
-                                
+                                    <div className="col-8 "><h3>Your Work</h3></div>
+                                    <div className="col-4"><p>{submitStatus ? 'Turned in' : 'Assigned'}</p></div>
+
                                 </div>
                                 <p></p>
                                 <Button height={40} width={300} intent="primary" iconBefore={PlusIcon}>Add or create</Button>
                                 <p></p>
-                                <Button appearance="primary" height={40} width={300} >Mark as done</Button>
+                                {/* <Button appearance="primary" height={40} width={300} onClick={() => { setSubmitStatus(submitStatus ? false : true); }}>{statusResult}</Button> */}
+                                <ModalR/>
                                 <p></p>
                             </div>
                             <div className="col-1 "></div>

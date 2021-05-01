@@ -32,6 +32,7 @@ import { BiCog } from "react-icons/bi";
 import "react-pro-sidebar/dist/css/styles.css";
 import "./Header.css";
 import { UploadReports } from "../UploadReports";
+import { AssignWork } from "../AssignWork";
 
 
 const Header = () => {
@@ -82,12 +83,16 @@ const Header = () => {
     },
     {
       path: "/upload-reports",
-      main: () => 
-              
-              <div>
-                {/* <h2>Upload Reports</h2> */}
-                <UploadReports />
-              </div>
+      main: () =>
+
+        <div>
+          {/* <h2>Upload Reports</h2> */}
+          <UploadReports />
+        </div>
+    },
+    {
+      path: "/assign-work",
+      main: () => <AssignWork />
     }
 
   ];
@@ -118,11 +123,12 @@ const Header = () => {
                     <MenuItem icon={<FaList />}><Link to="/assign-projects">Assign Projects</Link></MenuItem>
                     <MenuItem icon={<FaRegHeart />}><Link to="projects-archive">Projects Archive</Link></MenuItem>
                     <MenuItem icon={<RiPencilLine />}><Link to="project-progress">Project Progress</Link></MenuItem>
-                    
-                    <SubMenu title="Reports" icon = {<FaRegFileAlt/>}>
-                    <MenuItem icon={<BiCog />}><Link to="upload-reports">Upload Reports</Link></MenuItem>
-                    <MenuItem icon={<BiCog />}>View Reports</MenuItem>
-                    
+
+                    <SubMenu title="Reports" icon={<FaRegFileAlt />}>
+                      <MenuItem icon={<FaRegFileAlt />}><Link to="assign-work" >Assign Work</Link></MenuItem>
+                      <MenuItem icon={<BiCog />}><Link to="upload-reports">Upload Reports</Link></MenuItem>
+                      <MenuItem icon={<BiCog />}>View Reports</MenuItem>
+
                     </SubMenu>
                   </Menu>
                 </SidebarContent>
@@ -150,7 +156,7 @@ const Header = () => {
               }
             </Switch>
           </div>
-          <div className="col-3 bg-warning ">
+          <div className="col-3 bg-dark ">
           </div>
         </div>
       </Router>

@@ -11,7 +11,7 @@ class Enroll extends Component{
         const enroll = this.props.studentdata.map((sdata) =>{
             if(sdata==null){return (<div></div>);}
             return (
-                <div class="container">
+                <div class="container" >
                     <div class="row ">
                         <div class="col-sm-2 bg-primary">
                             <p>{sdata.id}</p>
