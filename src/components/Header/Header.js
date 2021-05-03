@@ -141,7 +141,7 @@ const Header = () => {
             </div>
 
           </div>
-          <div className="col-6 ">
+          <div className="col-9 ">
             <Switch>
               {
                 routes.map((route, index) => (
@@ -156,8 +156,7 @@ const Header = () => {
               }
             </Switch>
           </div>
-          <div className="col-3 bg-dark ">
-          </div>
+          
         </div>
       </Router>
     </div>

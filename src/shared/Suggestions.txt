@@ -2,3 +2,7 @@
 
 collapse: use collapse display announcements...
 breadcrumb: for showing user where he is currently...
+batches design: batches design would look better like classroom "classes"
+which tab to use... from react-tab library or tab from evergreen-ui library
+announcements for single batch or multiple batches from combobox?
+how to place calendar inside combobox
