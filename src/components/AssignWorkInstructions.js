@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, PlusIcon, LinkIcon } from 'evergreen-ui';
+import { Button,Textarea, PlusIcon, LinkIcon } from 'evergreen-ui';
 
 export function AssignWorkInstructions(){
 
@@ -7,7 +7,7 @@ export function AssignWorkInstructions(){
         <div>
                      <div className="bg-light text-primary">
                         <p>Instructions</p>
-                        <textarea
+                        <Textarea
                             rows="13"
                             cols="100"
                             style={{resize:"none"}}

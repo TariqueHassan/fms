@@ -52,7 +52,7 @@ export function ModalR(props){
           <h2 ref={_subtitle => (subtitle = _subtitle)}>Turn in your work?</h2>
           <div className="mb-5 mt-3">1 Attachment will be submitted for "Mid 1 - Lab Exam"</div>
           <div className="d-flex flex-row-reverse ">
-            <Button style={{color:"red"}}>Turn in</Button>
+            <Button style={{color:"green"}}>Turn in</Button>
             <Button className="mx-2" onClick={closeModal} intent="dark">Cancel</Button>
           </div>
         </Modal>

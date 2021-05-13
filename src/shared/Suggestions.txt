@@ -6,3 +6,6 @@ batches design: batches design would look better like classroom "classes"
 which tab to use... from react-tab library or tab from evergreen-ui library
 announcements for single batch or multiple batches from combobox?
 how to place calendar inside combobox
+
+show avatar of selected members in MeetingsBody.js 
+apply badge (color="green" on label "Assigned") and (color="red" on label "Missing") in UploadReportsCard.js  

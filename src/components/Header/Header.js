@@ -33,6 +33,8 @@ import "react-pro-sidebar/dist/css/styles.css";
 import "./Header.css";
 import { UploadReports } from "../UploadReports";
 import { AssignWork } from "../AssignWork";
+import { Meetings } from "../Meetings";
+import { Avatar } from "evergreen-ui";
 
 
 const Header = () => {
@@ -77,9 +79,9 @@ const Header = () => {
       </div>
     },
     {
-      path: "/project-progress",
+      path: "/meetings",
       sidebar: () => <div>shoelaces!</div>,
-      main: () => <h2>Project Progress</h2>
+      main: () => <Meetings />
     },
     {
       path: "/upload-reports",
@@ -104,11 +106,17 @@ const Header = () => {
           <div className="col-3 bg-dark">
             <div id="header" >
               {/* collapsed props to change menu size using menucollapse state */}
-              <ProSidebar collapsed={menuCollapse}>
-                <SidebarHeader>
+              <ProSidebar collapsed={menuCollapse} className="bg-dark">
+                <SidebarHeader >
                   <div className="logotext">
                     {/* small and big change using menucollapse state */}
-                    <p>{menuCollapse ? "Logo" : "Big Logo"}</p>
+                    <Avatar 
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg"
+                    name="Alan Turing"
+                    size={40}
+                    />
+                    <p>{menuCollapse ? "AT" : "Alan Turing"}</p>
+                    
                   </div>
                   <div className="closemenu" onClick={menuIconClick}>
                     {/* changing menu collapse icon on click */}
@@ -122,7 +130,7 @@ const Header = () => {
               </MenuItem>
                     <MenuItem icon={<FaList />}><Link to="/assign-projects">Assign Projects</Link></MenuItem>
                     <MenuItem icon={<FaRegHeart />}><Link to="projects-archive">Projects Archive</Link></MenuItem>
-                    <MenuItem icon={<RiPencilLine />}><Link to="project-progress">Project Progress</Link></MenuItem>
+                    <MenuItem icon={<RiPencilLine />}><Link to="meetings">Meetings</Link></MenuItem>
 
                     <SubMenu title="Reports" icon={<FaRegFileAlt />}>
                       <MenuItem icon={<FaRegFileAlt />}><Link to="assign-work" >Assign Work</Link></MenuItem>

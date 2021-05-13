@@ -1,75 +1,75 @@
 export const STUDENTDATA = [
     {
         id: 0,
-        name: 'Ali',
+        name: 'Tarique Hassan',
         cms: '014-18-1125',
-        groupId: '0A'
+        groupId: 'Group 1'
     },
     {
         id: 1,
-        name: 'Babar',
+        name: 'Suhail',
         cms: '014-18-2211',
-        groupId: '0A'
+        groupId: 'Group 1'
     },
     {
         id: 2,
         name: 'Daniyal',
         cms: '014-18-4411',
-        groupId: '0A'
+        groupId: 'Group 2'
     },
     {
         id: 0,
-        name: 'Ali',
+        name: 'Ahsan',
         cms: '014-18-1125',
-        groupId: '0A'
+        groupId: 'Group 2'
     },
     {
         id: 1,
-        name: 'Babar',
+        name: 'Waseem',
         cms: '014-18-2211',
-        groupId: '0A'
+        groupId: 'Group 3'
     },
     {
         id: 2,
-        name: 'Daniyal',
+        name: 'Tariq Ali',
         cms: '014-18-4411',
-        groupId: '0A'
+        groupId: 'Group 3'
     },
     {
         id: 0,
-        name: 'Ali',
+        name: 'GM',
         cms: '014-18-1125',
-        groupId: '0A'
+        groupId: 'Group 4'
     },
     {
         id: 1,
-        name: 'Babar',
+        name: 'Mahnoor',
         cms: '014-18-2211',
-        groupId: '0A'
+        groupId: 'Group 4'
     },
     {
         id: 2,
-        name: 'Daniyal',
+        name: 'Ahsan',
         cms: '014-18-4411',
-        groupId: '0A'
+        groupId: 'Group 5'
     },
     {
         id: 0,
-        name: 'Ali',
+        name: 'Iftikhar',
         cms: '014-18-1125',
-        groupId: '0A'
+        groupId: 'Group 5'
     },
     {
         id: 1,
-        name: 'Babar',
+        name: 'student 1',
         cms: '014-18-2211',
-        groupId: '0A'
+        groupId: 'Group 6'
     },
     {
         id: 2,
-        name: 'Daniyal',
+        name: 'student 2',
         cms: '014-18-4411',
-        groupId: '0A'
+        groupId: 'Group 6'
     },
     
 ]
