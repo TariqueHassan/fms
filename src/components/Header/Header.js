@@ -103,39 +103,39 @@ const Header = () => {
     <div>
       <Router>
         <div className="row">
-          <div className="col-3 bg-dark">
+          <div className="col " >
             <div id="header" >
               {/* collapsed props to change menu size using menucollapse state */}
-              <ProSidebar collapsed={menuCollapse} className="bg-dark">
+              <ProSidebar collapsed={menuCollapse} >
                 <SidebarHeader >
                   <div className="logotext">
                     {/* small and big change using menucollapse state */}
-                    <Avatar 
-                    src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg"
-                    name="Alan Turing"
-                    size={40}
+                    <Avatar
+                      src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg"
+                      name="Alan Turing"
+                      size={40}
                     />
                     <p>{menuCollapse ? "AT" : "Alan Turing"}</p>
-                    
+
                   </div>
                   <div className="closemenu" onClick={menuIconClick}>
                     {/* changing menu collapse icon on click */}
                     {lrcircle}
                   </div>
                 </SidebarHeader>
-                <SidebarContent>
-                  <Menu iconShape="square">
-                    <MenuItem active={true} icon={<FiHome />}>
-                      Home
-              </MenuItem>
-                    <MenuItem icon={<FaList />}><Link to="/assign-projects">Assign Projects</Link></MenuItem>
-                    <MenuItem icon={<FaRegHeart />}><Link to="projects-archive">Projects Archive</Link></MenuItem>
-                    <MenuItem icon={<RiPencilLine />}><Link to="meetings">Meetings</Link></MenuItem>
+                <SidebarContent >
+                  <Menu iconShape="square" >
+                    <MenuItem active={true} icon={<FiHome />} >
+                      <Link to="/" className="l">Home</Link>
+                    </MenuItem>
+                    <MenuItem icon={<FaList />}><Link to="/assign-projects" className="l" >Assign Projects</Link></MenuItem>
+                    <MenuItem icon={<FaRegHseart />}><Link to="projects-archive" className="l">Projects Archive</Link></MenuItem>
+                    <MenuItem icon={<RiPencilLine />}><Link to="meetings" className="l">Meetings</Link></MenuItem>
 
-                    <SubMenu title="Reports" icon={<FaRegFileAlt />}>
-                      <MenuItem icon={<FaRegFileAlt />}><Link to="assign-work" >Assign Work</Link></MenuItem>
-                      <MenuItem icon={<BiCog />}><Link to="upload-reports">Upload Reports</Link></MenuItem>
-                      <MenuItem icon={<BiCog />}>View Reports</MenuItem>
+                    <SubMenu title="Reports" icon={<FaRegFileAlt />} className="l" >
+                      <MenuItem icon={<FaRegFileAlt />}><Link to="assign-work" className="l">Assign Work</Link></MenuItem>
+                      <MenuItem icon={<BiCog />}><Link to="upload-reports" className="l">Upload Reports</Link></MenuItem>
+                      <MenuItem icon={<BiCog />}><Link to ="view-reports" className="l">View Reports</Link></MenuItem>
 
                     </SubMenu>
                   </Menu>
@@ -149,7 +149,7 @@ const Header = () => {
             </div>
 
           </div>
-          <div className="col-9 ">
+          <div className={menuCollapse?`col-${11}`:`col-${9}`}>
             <Switch>
               {
                 routes.map((route, index) => (
@@ -164,7 +164,7 @@ const Header = () => {
               }
             </Switch>
           </div>
-          
+
         </div>
       </Router>
     </div>

@@ -10,6 +10,7 @@ import Header from './components/Header/Header';
 import {STUDENTDATA} from './shared/studentsdata'; 
 import {SIDEBARDATA} from './shared/sidebardata'; 
 import { ModalR } from './components/ModalUploadReports';
+import { MainPage } from './components/MainPage';
 function App(){
 
 
@@ -19,12 +20,12 @@ function App(){
       <NavbarComponent/>
       
       {/* <Sidebar/> */}
-      <div className="">
+      <div >
+{/* <MainPage /> */}
       <Header />
-      {/* <ModalR /> */}
       </div>
       {/* <Enroll studentdata={STUDENTDATA}/> */}
-      {/* < LoginModalComponent/> */}
+      
 
       </div>
     );

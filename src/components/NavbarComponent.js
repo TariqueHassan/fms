@@ -1,8 +1,9 @@
 import React, { Component,useState } from 'react';
 import { Navbar, Button, NavbarBrand } from 'reactstrap'
 import LoginModal from "react-login-modal";
+import { LoginPage } from './LoginPage';
 export default function NavbarComponent() {
-
+    
     return (
         <div className="row mb-1">
             <Navbar className="navbar navbar-dark fixed-top  flex-md-nowrap p-0 " style={{background:"darkblue"}}>
@@ -10,7 +11,9 @@ export default function NavbarComponent() {
                 <input className="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" />
                 <ul className="navbar-nav px-3">
                     <li className="nav-item text-nowrap">
-                        <Button className="btn border border-0" style={{background:"darkblue"}} >Login</Button>
+                        
+                         <LoginPage />
+                         
                     </li>
                 </ul>
             </Navbar>
@@ -28,7 +31,7 @@ function HandleSignIn() {
   
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="primary" >
                 new button
       </Button>
            

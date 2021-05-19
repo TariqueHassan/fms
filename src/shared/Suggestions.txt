@@ -1,6 +1,7 @@
 
 
-collapse: use collapse display announcements...
+collapse: use collapse to display announcements...
+collapse: use accordion to display announcements...
 breadcrumb: for showing user where he is currently...
 batches design: batches design would look better like classroom "classes"
 which tab to use... from react-tab library or tab from evergreen-ui library
@@ -9,3 +10,8 @@ how to place calendar inside combobox
 
 show avatar of selected members in MeetingsBody.js 
 apply badge (color="green" on label "Assigned") and (color="red" on label "Missing") in UploadReportsCard.js  
+
+NON-FUNCTIONAL REQUIREMENTS:
+use: corner-dialog, badge,
+
+
