@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Checkbox, Combobox, LinkIcon, PlusIcon } from 'evergreen-ui';
-import { ComboboxComponent } from './ComboboxComponent';
-import { STUDENTDATA } from './studentsdata';
-import {CheckboxTesting} from './CheckboxTesting';
+// import { ComboboxComponent } from '.ds./../ComboboxComponent';
+import { STUDENTDATA } from '../../../components/studentsdata';
+import {CheckboxTesting} from '../../CheckboxTesting';
 export function MeetingsAppointments() {
     const [comboItem, setComboItem] = useState("");
     const [checked, setChecked] = useState(true);
@@ -51,9 +51,9 @@ export function MeetingsAppointments() {
                 </div>
             </div>
             <h6>Day</h6>
-            <ComboboxComponent comboItems={["Monday", "Tuesday", "Wednesday"]} defaultItem="Monday" />
+            {/* <ComboboxComponent comboItems={["Monday", "Tuesday", "Wednesday"]} defaultItem="Monday" /> */}
             <h6>Time</h6>
-            <ComboboxComponent comboItems={["2.00", "11.00", "12.00", "2.00", "11.00", "12.00"]} defaultItem="2.00" />
+            {/* <ComboboxComponent comboItems={["2.00", "11.00", "12.00", "2.00", "11.00", "12.00"]} defaultItem="2.00" /> */}
 
             <div className="my-3"><Button height={40} width={300} intent="primary" iconBefore={PlusIcon}>Assign</Button></div>
 

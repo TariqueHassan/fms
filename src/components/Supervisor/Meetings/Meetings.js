@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import 'react-tabs/style/react-tabs.css';
-import { AssignWorkBody } from './AssignWorkBody';
-import { AssignWorkDue } from './AssignWorkDue';
+// import { AssignWorkBody } from '../Supervisor/Meetings/AssignWorkBody';
+// import { AssignWorkDue } from '../Supervisor/Meetings/AssignWorkDue';
 import { MeetingsAppointments } from './MeetingsAppointments';
 import { MeetingsBody } from './MeetingsBody';
 import { MeetingsReminder } from './MeetingsReminder';

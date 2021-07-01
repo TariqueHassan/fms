@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Button, PlusIcon, Badge, FilePicker, Pane, Dialog } from 'evergreen-ui';
 import {Upload} from 'antd';
 import { ModalR } from './ModalUploadReports';
+import { UserContext } from './UserContext';
 export function UploadReportsCard() {
 
     const customStyles = {
@@ -56,13 +57,16 @@ export function UploadReportsCard() {
                                             placeholder="Selected files here!"
                                         />
                                     </div>
+                                    
                                 </Pane>
                             </Dialog>
 
                         </Pane>
                     </div>
-                    <Button appearance="primary" height={40} width={300} onClick={() => { setSubmitStatus(submitStatus ? false : true); }}>{statusResult}</Button>
+                    {/* <Button appearance="primary" height={40} width={300} onClick={() => { setSubmitStatus(submitStatus ? false : true); }}>{statusResult}</Button> */}
+                    <UserContext.Provider value={{submitStatus,setSubmitStatus}}>
                     <ModalR />
+                    </UserContext.Provider>
 
                 </div>
                 <div className="col-1 "></div>

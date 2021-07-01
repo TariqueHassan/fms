@@ -28,7 +28,7 @@
     
   }
   #header .pro-sidebar-inner {
-    background-color: rgb(88, 68, 136);
+    background-color: rgb(75, 74, 87);
     box-shadow: 0.5px 0.866px 2px 0px rgba(218, 52, 52, 0.15);
     
   }
@@ -39,6 +39,14 @@
     color: rgb(0, 0, 0);
     font-weight: bold;
   }
+
+  .horizontal-scroll-wrapper {
+    height: 650px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+
   /* #header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .l {
     color: rgb(218, 218, 218);
     margin: 10px 0px;

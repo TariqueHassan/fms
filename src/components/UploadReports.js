@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { UploadReportsCard } from './UploadReportsCard';
-import { AssignWorkBody } from './AssignWorkBody';
 import { UploadReportsBody } from './UploadReportsBody';
 export function UploadReports() {
 
@@ -15,6 +14,11 @@ export function UploadReports() {
                 </div>
                 <div className="col-4 mt-2 bg-light text-primary">
                 <UploadReportsCard />
+                <br/><br/>
+                <h5>Batch: </h5>
+                <h5>Deadline: </h5>
+                <h5>Marks: </h5>
+                
                 </div>
             
             </div>

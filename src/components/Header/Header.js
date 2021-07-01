@@ -32,11 +32,14 @@ import { BiCog } from "react-icons/bi";
 import "react-pro-sidebar/dist/css/styles.css";
 import "./Header.css";
 import { UploadReports } from "../UploadReports";
-import { AssignWork } from "../AssignWork";
-import { Meetings } from "../Meetings";
+import { AssignWork } from "../Coordinator/AssignWork/AssignWork";
+import { Meetings } from "../Supervisor/Meetings/Meetings";
 import { Avatar } from "evergreen-ui";
+import Announcements from '../FYP Group/Announcements';
 
-
+import AnnounceData from './Annoucements.json';
+import DevelopedProjects from '../DevelopedProjects';
+import developedData from './developed.json';
 const Header = () => {
 
   //create initial menuCollapse state using useState hook
@@ -71,11 +74,20 @@ const Header = () => {
         </div>
     },
     {
+      path: "/announcements",
+      sidebar: () => <div>shoelaces!</div>,
+      main: () => <div >
+        <h2>Announcements</h2>
+        <Announcements data={AnnounceData}/>
+      </div>
+    },
+    {
       path: "/projects-archive",
       sidebar: () => <div>shoelaces!</div>,
       main: () => <div className="col-12">
         <h2>Projects Archive</h2>
-        <Enroll studentdata={STUDENTDATA} />
+        {/* <Enroll studentdata={STUDENTDATA} /> */}
+        <DevelopedProjects list={developedData}/>
       </div>
     },
     {
@@ -103,7 +115,7 @@ const Header = () => {
     <div>
       <Router>
         <div className="row">
-          <div className="col " >
+          <div className="col 3" >
             <div id="header" >
               {/* collapsed props to change menu size using menucollapse state */}
               <ProSidebar collapsed={menuCollapse} >
@@ -129,7 +141,10 @@ const Header = () => {
                       <Link to="/" className="l">Home</Link>
                     </MenuItem>
                     <MenuItem icon={<FaList />}><Link to="/assign-projects" className="l" >Assign Projects</Link></MenuItem>
-                    <MenuItem icon={<FaRegHseart />}><Link to="projects-archive" className="l">Projects Archive</Link></MenuItem>
+                    <MenuItem icon={<FaList />}><Link to="/announcements" className="l" >Announcements</Link></MenuItem>
+
+                    
+                    <MenuItem icon={<FaRegHeart />}><Link to="projects-archive" className="l">Projects Archive</Link></MenuItem>
                     <MenuItem icon={<RiPencilLine />}><Link to="meetings" className="l">Meetings</Link></MenuItem>
 
                     <SubMenu title="Reports" icon={<FaRegFileAlt />} className="l" >
@@ -149,7 +164,8 @@ const Header = () => {
             </div>
 
           </div>
-          <div className={menuCollapse?`col-${11}`:`col-${9}`}>
+          {/* className={menuCollapse?`col-${11}`:`col-${9} ` */}
+          <div  className="col-9 horizontal-scroll-wrapper">
             <Switch>
               {
                 routes.map((route, index) => (

@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react';
-import {Button, Pane, Dialog } from 'evergreen-ui';
+import {Button, Pane, Dialog, TextInput } from 'evergreen-ui';
 export function LoginPage(props) {
 
     const [isShown, setIsShown] = React.useState(props.openLoginDialog);
     // isShown=props.openLoginDialog;
     return (
         <div>
-            <Button className="btn border border-0 text-white"
+            <Button className=" text-white"
                          onClick={()=>setIsShown(true)}
-                         style={{background:"darkblue", fontSize:"15px"}} >Login</Button>
+                         style={{background:"darkblue", fontSize:"15px"}} >Logout</Button>
             <Pane >
                 <Dialog
                     isShown={isShown}
@@ -20,9 +20,10 @@ export function LoginPage(props) {
                     Login Dialog!
                 
           <hr />
-                    <Pane height={300} width="100%" backgroundColor="#FAFFF1">
-                        
-                    </Pane>
+          <TextInput className="mb-3" placeholder="Username"  />
+
+          <TextInput className="mb-3" placeholder="Password"  />
+          <Button appearance="primary">Login</Button>
                 </Dialog>
             </Pane>
         </div>
