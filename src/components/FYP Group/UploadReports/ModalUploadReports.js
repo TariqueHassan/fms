@@ -2,7 +2,7 @@ import React,{useContext} from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import {Button} from 'evergreen-ui';
-import { UserContext } from './UserContext';
+import { UserContext } from '../../UserContext';
 
 const customStyles = {
   content : {

@@ -1,7 +1,7 @@
 import React, { Component,useState } from 'react';
 import { Navbar, Button, NavbarBrand } from 'reactstrap'
 import LoginModal from "react-login-modal";
-import { LoginPage } from './LoginPage';
+import { LoginPage } from '../LoginPage';
 export default function NavbarComponent() {
     
     return (
@@ -16,24 +16,6 @@ export default function NavbarComponent() {
                     </li>
                 </ul>
             </Navbar>
-            <HandleSignIn />
         </div>
-    );
-}
-
-function HandleSignIn() {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-  
-    const handleShow = () => setShow(true);
-  
-    return (
-        <>
-            <Button variant="primary" >
-                new button
-      </Button>
-           
-        </>
     );
 }

@@ -1,6 +1,6 @@
 //import useState hook to create menu collapse state
 import React, { useState } from "react";
-import Enroll from '../EnrollComponent';
+import Enroll from '../testing/EnrollComponent';
 import { STUDENTDATA } from '../studentsdata';
 //import react pro sidebar components
 import { FaRegFileAlt } from "react-icons/fa"
@@ -31,14 +31,14 @@ import { BiCog } from "react-icons/bi";
 //import sidebar css from react-pro-sidebar module and our custom css 
 import "react-pro-sidebar/dist/css/styles.css";
 import "./Header.css";
-import { UploadReports } from "../UploadReports";
+import { UploadReports } from "../FYP Group/UploadReports/UploadReports";
 import { AssignWork } from "../Coordinator/AssignWork/AssignWork";
 import { Meetings } from "../Supervisor/Meetings/Meetings";
 import { Avatar } from "evergreen-ui";
 import Announcements from '../FYP Group/Announcements';
 
 import AnnounceData from './Annoucements.json';
-import DevelopedProjects from '../DevelopedProjects';
+import DevelopedProjects from '../Coordinator/DevelopedProjects';
 import developedData from './developed.json';
 const Header = () => {
 

@@ -1,8 +1,11 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import {Button, Pane, Dialog, TextInput } from 'evergreen-ui';
+import Header from './Home/Header';
+import { MainPage } from './MainPage';
 export function LoginPage(props) {
 
-    const [isShown, setIsShown] = React.useState(props.openLoginDialog);
+    const [isShown, setIsShown] = React.useState(true); //props.openLoginDialog
+    const [usernameTextInput, setUsernameTextInput] = useState("")
     // isShown=props.openLoginDialog;
     return (
         <div>
@@ -11,21 +14,23 @@ export function LoginPage(props) {
                          style={{background:"darkblue", fontSize:"15px"}} >Logout</Button>
             <Pane >
                 <Dialog
-                    isShown={isShown}
-                    title="Previous Assigned Work"
+                    isShown={isShown} //isShown
+                    title="Welcome to SIBAU FYP MS"
                     width="750px"
                     onCloseComplete={() => setIsShown(false)}
-                    confirmLabel="OK"
+                    // confirmLabel="OK"
                 >
-                    Login Dialog!
+                    Please Login to Continue!
                 
           <hr />
-          <TextInput className="mb-3" placeholder="Username"  />
-
+          <TextInput className="mb-3" placeholder="Username" onChange={(e)=>setUsernameTextInput(e.target.value)} />
           <TextInput className="mb-3" placeholder="Password"  />
-          <Button appearance="primary">Login</Button>
+            <p>hey: {usernameTextInput}</p>
+          <Button appearance="primary" onClick={()=>setIsShown(false)}>Login</Button>
+          
                 </Dialog>
             </Pane>
+            
         </div>
     )
 }

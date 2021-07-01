@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Checkbox, Combobox, LinkIcon, PlusIcon } from 'evergreen-ui';
 // import { ComboboxComponent } from '.ds./../ComboboxComponent';
 import { STUDENTDATA } from '../../../components/studentsdata';
-import {CheckboxTesting} from '../../CheckboxTesting';
+import {CheckboxTesting} from '../../testing/CheckboxTesting';
 export function MeetingsAppointments() {
     const [comboItem, setComboItem] = useState("");
     const [checked, setChecked] = useState(true);
