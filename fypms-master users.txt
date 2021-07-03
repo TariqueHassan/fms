@@ -1,0 +1,11 @@
+Student
+id:2014-04-02748
+pass: Mwaisaka
+
+Coordinator
+id: 2014-04-02757
+pass: Mhagama
+
+Supervisor
+id: 2014-04-02795
+pass:Manyhnela

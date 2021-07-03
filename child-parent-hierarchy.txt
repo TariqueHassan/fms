@@ -1,0 +1,12 @@
+App.js->AppAssistant->NavbarComponent->LoginPage
+
+fyp group pages:
+-upload reports
+-announcements
+
+coordinator pages:
+-AssignWork
+-DevelopedProjects
+
+Supervisor pages:
+-Meetings

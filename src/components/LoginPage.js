@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import {Button, Pane, Dialog, TextInput } from 'evergreen-ui';
 import Header from './Home/Header';
 import { MainPage } from './MainPage';
+import { UserContext } from './UserContext';
+import { FaClosedCaptioning } from 'react-icons/fa';
 export function LoginPage(props) {
 
     const [isShown, setIsShown] = React.useState(true); //props.openLoginDialog
-    const [usernameTextInput, setUsernameTextInput] = useState("")
-    // isShown=props.openLoginDialog;
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const {userDataInputText, setUserDataInputText} = useContext(UserContext);
+    var obj = {username,password,isShown};
     return (
         <div>
             <Button className=" text-white"
@@ -23,14 +27,14 @@ export function LoginPage(props) {
                     Please Login to Continue!
                 
           <hr />
-          <TextInput className="mb-3" placeholder="Username" onChange={(e)=>setUsernameTextInput(e.target.value)} />
-          <TextInput className="mb-3" placeholder="Password"  />
-            <p>hey: {usernameTextInput}</p>
-          <Button appearance="primary" onClick={()=>setIsShown(false)}>Login</Button>
+          <TextInput type="text" className="mb-3" placeholder="Username" onChange={(e)=>setUsername(e.target.value)} />
+          <TextInput type="password" className="mb-3" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} />
+            <p>hey new: {obj.username} pass:{obj.password}</p>
+          <Button appearance="primary" onClick={()=>{{setUserDataInputText(obj)} {setIsShown(false)}}}>Login</Button>
           
                 </Dialog>
             </Pane>
-            
+
         </div>
     )
 }
