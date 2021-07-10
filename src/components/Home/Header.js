@@ -63,7 +63,8 @@ const Header = () => {
       sidebar: () => <div>home!</div>,
       main: () => 
       <div>
-        <h2>Home</h2>
+        <h2>Announcements</h2>
+        <hr/>
         <Announcements data={AnnounceData} />
       </div>
     },
@@ -135,7 +136,7 @@ const Header = () => {
   return (
     <div>
       <Router>
-        <div className="row ">
+        <div className="row " style={{width:"1550px"}}>
 
           <div className={menuCollapse ? `col-${1}` : `col-${3} `} >
             {/* <div className="card shadow-lg">
@@ -157,7 +158,7 @@ const Header = () => {
                     />
 
                     {/* <p style={{ color: "lightgrey" }}>{menuCollapse ? "AT" : dashboard + " Dashboard"}</p> */}
-                    <p style={{ color: "lightgrey" }}>Welcome!</p>
+                    {/* <p style={{ color: "lightgrey" }}>Welcome!</p> */}
                     {/* <div className="card shadow-lg bg-secondary mb-3">
                       <p className="d-flex justify-content-around ">Student Dashboard</p>
                       <p>Name: {userDataInputText.username}</p>
@@ -194,11 +195,11 @@ const Header = () => {
                     </SubMenu>
                   </Menu>
                 </SidebarContent>
-                <SidebarFooter>
+                {/* <SidebarFooter>
                   <Menu iconShape="square">
                     <MenuItem icon={<FiLogOut />}>Logout</MenuItem>
                   </Menu>
-                </SidebarFooter>
+                </SidebarFooter> */}
               </ProSidebar>
             </div>
 
@@ -207,7 +208,7 @@ const Header = () => {
               horizontal-scroll-wrapper
           */}
 
-          <div className={menuCollapse ? `col-${11}` : `col-${9} `} >
+          <div className={menuCollapse ? `col-${11}` : `col-${9} horizontal-scroll-wrapper`} >
             <Switch>
               {
                 routes.map((route, index) => (

@@ -16,7 +16,7 @@ export function UploadReportsCard() {
     const [isShown, setIsShown] = React.useState(false);
     const [fileName, setFileName] = useState("")
     return (
-        <div className="card  shadow-lg" >
+        <div className="card  shadow-lg">
             <div className="row">
 
                 <div className="col-1 "></div>
@@ -51,9 +51,9 @@ export function UploadReportsCard() {
                                             <Button>Browse</Button>
                                         </Upload> */}
                                         <FilePicker
-                                            multiple
+                                            //multiple
                                             width={250}
-                                            onChange={files => setFileName(files+"he")}
+                                            onChange={files => setFileName(files[0].name)}//setFileName(files. +"he")}
                                             placeholder="Selected files here!"
                                         />
                                     </div>

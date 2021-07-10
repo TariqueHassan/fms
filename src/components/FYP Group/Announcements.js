@@ -26,6 +26,7 @@ const Annoucement = ({ data }) => {
                 ))
             }
         </Container>
+        
     );
 };
 

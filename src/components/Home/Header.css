@@ -1,3 +1,18 @@
+
+/* css class for scrollbar */
+.horizontal-scroll-wrapper {
+  height: 650px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@media only screen and (max-width: 720px) {
+  html {
+    overflow:scroll;
+  }
+}
+
+  /* sidebar css styles */
+
 #header {
   position: absolute;
   width: 345px;
@@ -23,8 +38,8 @@
     
   }
   #header .pro-sidebar.collapsed {
-    width: 115px;
-    min-width: 115px;
+    width: 100px;
+    min-width: 100px;
     
   }
   #header .pro-sidebar-inner {
@@ -40,18 +55,15 @@
     font-weight: bold;
   }
 
-  .horizontal-scroll-wrapper {
-    height: 650px;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
+  
 
-
-  /* #header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .l {
+/* *********above code for latest changes */
+/* 
+  #header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .l {
     color: rgb(218, 218, 218);
     margin: 10px 0px;
-  } */
-/* #header {
+  }
+#header {
     position: absolute;
     width: 378px;
   }
@@ -109,10 +121,10 @@
   }
   #header .pro-sidebar-inner .pro-sidebar-layout ul .pro-inner-item .pro-icon-wrapper .pro-item-content {
     color: #000;
-  }
+  } */
   /* #header .pro-sidebar-inner .pro-sidebar-layout .active {
     background-image: linear-gradient(0deg, #fece00 0%, #ffe172 100%);
-  } */
+  }
 
 
   /* #header .logo {

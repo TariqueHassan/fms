@@ -12,7 +12,7 @@
     "evergreen-ui": "^5.1.2",
     "mdbreact": "^5.0.2",
     "react": "^17.0.1",
-    "react-bootstrap": "^1.6.0",
+    "react-bootstrap": "^1.6.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
     "react-login-modal": "^1.2.1",

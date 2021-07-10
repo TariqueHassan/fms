@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Enroll from './components/testing/EnrollComponent';
 import Sidebar from './components/sidebar';
 import LoginModalComponent from './components/testing/LoginModalComponent';
